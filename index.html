@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Math Sprint Game Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fontawesome ICON-->
+    <link href="assets/css/all.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <!-- Style.css CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Play Game -->
+    <div class="game" id="splash-page">
+        <div class="game__header">
+            <h1 class="game__h1">Math Sprint Game</h1>
+        </div>
+        <form class="game__start-form" id="start-form">
+            <div class="game__selection">
+                <div class="game__radio-container">
+                    <label for="value-10">10 Question</label>
+                    <input type="radio" name="question" value="10" id="value-10">
+                    <div class="game__score">
+                        <span>Best Scores</span>
+                        <div class="game__best-score"></div>
+                    </div>
+                </div>
+                <div class="game__radio-container">
+                    <label for="value-25">25 Question</label>
+                    <input type="radio" name="question" value="25" id="value-25">
+                    <div class="game__score">
+                        <span>Best Scores</span>
+                        <div class="game__best-score"></div>
+                    </div>
+                </div>
+                <div class="game__radio-container">
+                    <label for="value-50">50 Question</label>
+                    <input type="radio" name="question" value="50" id="value-50">
+                    <div class="game__score">
+                        <span>Best Scores</span>
+                        <div class="game__best-score"></div>
+                    </div>
+                </div>
+                <div class="game__radio-container">
+                    <label for="value-99">99 Question</label>
+                    <input type="radio" name="question" value="99" id="value-99">
+                    <div class="game__score">
+                        <span>Best Scores</span>
+                        <div class="game__best-score"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="game__footer">
+                <button class="game__btn" type="submit">Start Round</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Count Down -->
+    <div class="game cnt-down hidden" id="countdown-page">
+        <div class="game__header">
+            <h1 class="game__h1">Math Sprint Game</h1>
+        </div>
+
+        <div class="game__countdown-round">
+            <h1 class="game__countdown"></h1>
+        </div>
+    </div>
+
+
+    <!-- Game Page -->
+    <div class="game hidden" id="game-page">
+        <div class="game__header">
+            <h1 class="game__h1">Math Sprint Game</h1>
+        </div>
+        <div class="game__item-container">
+
+        </div>
+        <div class="game__footer--choose">
+            <button class="game__wrong" onclick="select(false)" type="submit"><i class="fas fa-times"></i> Wrong</button>
+            <button class="game__right" onclick="select(true)" type="submit"><i class="fas fa-check" aria-hidden="true"></i> Right</button>
+        </div>
+    </div>
+
+
+    <!-- Score Page -->
+    <div class="game hidden" id="score-page">
+        <div class="game__header">
+            <h1 class="game__h1">Math Sprint Game</h1>
+        </div>
+            <div class="game__score-container">
+                <h1 class="game__title">Your Time</h1>
+                <h1 class="game__final-time"></h1>
+                <h1 class="game__base-time"></h1>
+                <h1 class="game__penalty-time"></h1>
+            </div>
+        <div class="game__footer">
+            <button class="game__btn game__play-again-btn hidden" onclick="playAgain()" type="submit">Play Again</button>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/shuffle.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

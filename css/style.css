@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');*/
+
+:root {
+    --primary: #FA8334;
+    --secondary: #388697;
+    --text: #ffffff;
+    --accent: #FFFD77;
+    --background: #271033;
+    --border-radius: 5px;
+    --box-shadow: 0 5px 10px rgba(56, 134, 151, 0.51);
+    --border: 3px solid var(--text);
+}
+
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto Mono, sans-serif;
+}
+
+.wrapper {
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    width: 812px;
+    height: 90vh;
+    margin: 20px auto;
+    background: var(--secondary);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game__header {
+    width: 100%;
+    height: 165px;
+    margin-bottom: auto;
+    background: var(--primary);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.game__start-form {
+    width: 100%;
+}
+
+.game__selection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.game__radio-container {
+    position: relative;
+    height: 60px;
+    width: 766px;
+    border: var(--border);
+    margin: 5px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.game__radio-container.active, .game__item.active {
+    height: 60px;
+    width: 766px;
+    border: var(--border);
+    margin: 5px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text);
+    cursor: pointer;
+    background: var(--primary);
+}
+
+
+
+input[type="radio"] {
+    opacity: 0;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+button {
+    outline: 0 solid var(--text);
+}
+
+.game__score {
+    text-align: center;
+}
+
+.game__best-score {
+    font-size: 20px;
+}
+
+label {
+    font-size: 25px;
+}
+
+.game__footer {
+    width: 100%;
+    height: 90px;
+    background: var(--accent);
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game__btn {
+    width: 766px;
+    height: 68px;
+    background: var(--primary);
+    border: none;
+    box-shadow: var(--box-shadow);
+    color: var(--text);
+    font-size: 25px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.game__countdown-round {
+    width: 183px;
+    height: 183px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    margin-bottom: auto;
+}
+
+.game__countdown {
+    color: var(--text);
+    font-size: 80px;
+}
+
+.game__item-container {
+    position: relative;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.game__item-container::-webkit-scrollbar {
+    display: none;
+}
+
+.game__item {
+    position: relative;
+    height: 60px;
+    //width: 812px;
+    //border: 1px solid #ffffff;
+    border: none;
+    color: var(--text);
+    font-size: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.height-240 {
+    height:215px;
+    width: 100%;
+}
+
+.height-500 {
+    height: 258px;
+    width: 100%;
+}
+
+.selected-item {
+    position: fixed;
+    top: 350px;
+    z-index: 1;
+    height: 65px;
+    width: 812px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    cursor: pointer;
+    background: var(--primary);
+}
+
+.game__footer--choose {
+    width: 100%;
+    height: 90px;
+    background: var(--accent);
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.game__wrong {
+    width: 183px;
+    height: 50px;
+    background: #DF7C8A;
+    border: none;
+    box-shadow: 6px 10px 20px rgba(223, 124, 138, 0.42);
+    color: var(--text);
+    font-size: 20px;
+}
+
+.game__right {
+    width: 183px;
+    height: 50px;
+    background: var(--secondary);
+    border: none;
+    box-shadow: 6px 10px 20px rgba(223, 124, 138, 0.42);
+    color: var(--text);
+    font-size: 20px;
+}
+
+.fas {
+    margin-right: 5px;
+}
+
+.game__score-container {
+    text-align: center;
+    color: var(--text);
+}
+
+.game__title {
+    font-size: 40px;
+}
+
+.game__final-time {
+    font-size: 120px;
+    margin-bottom: 30px;
+    color: var(--accent);
+}
+
+.game__base-time {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.game__penalty-time {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+@media (max-width: 820px) {
+    .game {
+        justify-content: normal;
+        align-items: normal;
+        width: 90%;
+    }
+
+    .game.cnt-down {
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .game__radio-container {
+        width: 95%;
+    }
+
+    .game__radio-container.active {
+        width: 95%;
+    }
+
+    .game__item {
+        width: 100%;
+    }
+    .selected-item {
+        width: calc(100% - 10%);
+    }
+
+    .game__btn {
+        width: 95%;
+    }
+
+    .game__header {
+        font-size: 25px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .game {
+        justify-content: normal;
+        align-items: normal;
+        width: 95%;
+    }
+
+    .game__radio-container {
+        width: 95%;
+    }
+
+    .game__radio-container.active {
+        width: 95%;
+    }
+
+    .game__item {
+        width: 100%;
+    }
+
+    .selected-item {
+        width: calc(100% - 5%);
+    }
+
+    .game__btn {
+        width: 95%;
+    }
+
+    .game__header {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    .game__best-score {
+        font-size: 16px;
+    }
+
+}
